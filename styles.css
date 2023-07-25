@@ -1,0 +1,103 @@
+* ,*::before,*::after{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body{
+    background-color: rgba(128, 128, 128, 0.975);
+  }
+  h1 {
+    text-align: center;
+  }
+  /*This is the place where we add our tasks*/
+.taskInput {
+    width: 100%;
+    outline: none;
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid #f3f3f3;
+    margin-bottom: 3px;
+  }
+  /*This is the counter which counts our number of tasks*/
+#totalTasks {
+    margin-bottom: 20px;
+    font-size: 13px;
+    margin-left: 2px;
+    color: black;
+  }
+  #mainContainer {
+    width: 500px;
+    margin: 0 auto;
+  }
+  /* TO set the Unordered List where we will be adding our tasks*/
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+  }
+  ul li {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  ul li:hover {
+    background: whitesmoke;
+  }
+  /* TO set the display list input*/
+  #displayList input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+  
+  
+   /* TO set the label before being clicked*/
+  #displayList label:before {
+    content:'';
+    background-color: transparent;
+    border: 2px solid #00bf76;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+   /* TO set the label after being clicked*/
+  #displayList input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  /* TO change the checkbox color once checked*/
+  #displayList  input:checked + label:before {
+    background: #8fdd2a;
+  } 
+  /* Used for Transition Effect*/
+  #displayList  input:checked + label {
+    text-decoration: line-through;
+  }
+  /* Used for deleting the task*/
+  .delete {
+    height: 28px;
+      padding: 5px 0px;
+      border-radius: 3px;
+  }
+  .delete:hover {
+    background: #f2f2f2;
+    cursor: pointer;
+  }
+  
+  
+  
